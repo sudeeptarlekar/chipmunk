@@ -61,7 +61,7 @@ When the user provides natural language instructions, interpret them as follows:
 - "regex pattern \\d+" → set is_regex: true
 - "find ERROR, WARNING, and CRITICAL" → three separate filters
 "#)]
-    async fn apply_filters(
+    async fn apply_search_filters(
         &self,
         Parameters(param): Parameters<FilterParameter>,
     ) -> Result<CallToolResult, McpError> {
